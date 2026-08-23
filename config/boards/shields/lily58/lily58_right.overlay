@@ -20,9 +20,13 @@
         , <&pro_micro 19 GPIO_ACTIVE_HIGH>
         ;
 };
+
+/*
 &right_encoder {
     status = "okay";
 };
+*/
+
 / {
     chosen {
       zmk,battery = &vbatt;
