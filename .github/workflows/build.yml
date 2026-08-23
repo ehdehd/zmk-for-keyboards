@@ -8,12 +8,3 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
-
-- name: Debug Nice!View
-  run: |
-    find /tmp -name zephyr.dts -exec sh -c '
-      echo "===== FILE: $1 ====="
-      grep -n -A40 -B10 "nice_view" "$1" || true
-      echo "===== CS ====="
-      grep -n -A15 -B10 "cs-gpios" "$1" || true
-    ' _ {} \;
